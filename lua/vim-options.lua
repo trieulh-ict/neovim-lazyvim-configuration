@@ -9,3 +9,5 @@ vim.g.mapleader = " "
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_keymap('n', '<leader>d', 'yyp', { noremap = true, silent = true })
+
