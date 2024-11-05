@@ -10,7 +10,7 @@ return {
       shell = vim.o.shell,      -- Use your default shell
     })
 
-    vim.api.nvim_set_keymap('n',"<leader>t", ":ToggleTerm<CR>", {})
+    vim.api.nvim_set_keymap('n',"<leader>tt", ":ToggleTerm<CR>", {})
 
     local Terminal = require("toggleterm.terminal").Terminal
     local lazygit = Terminal:new({
