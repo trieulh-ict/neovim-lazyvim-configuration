@@ -4,13 +4,20 @@ return {
     require("toggleterm").setup({
       size = 15,                -- Height of terminal when horizontal (you can adjust as needed)
       open_mapping = [[<c-\>]], -- Default keybinding to toggle the terminal
-      direction = 'float',
+      direction = "float",
       shade_filetypes = {},
-      close_on_exit = true,     -- Close the terminal window when the process exits
-      shell = vim.o.shell,      -- Use your default shell
+      close_on_exit = true, -- Close the terminal window when the process exits
+      shell = vim.o.shell,  -- Use your default shell
     })
 
-    vim.api.nvim_set_keymap('n',"<leader>tt", ":ToggleTerm<CR>", {})
+    vim.api.nvim_set_keymap("n", "<leader>tt", ":ToggleTerm<CR>", {})
+
+    vim.api.nvim_set_keymap(
+      "n",
+      "<leader>ttb",
+      "<cmd>ToggleTerm size=15 direction=horizontal<CR>",
+      { noremap = true, silent = true }
+    )
 
     local Terminal = require("toggleterm.terminal").Terminal
     local lazygit = Terminal:new({
