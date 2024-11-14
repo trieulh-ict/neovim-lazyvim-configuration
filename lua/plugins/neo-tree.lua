@@ -33,7 +33,7 @@ return {
     },
   },
   config = function()
-    vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal left<CR>", {})
+    vim.keymap.set("n", "<C-e>", ":Neotree filesystem toggle<CR>", {})
     vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 
     -- If you want icons for diagnostic errors, you'll need to define them somewhere:
