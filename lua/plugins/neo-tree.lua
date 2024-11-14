@@ -60,6 +60,7 @@ return {
       default_component_configs = {
         container = {
           enable_character_fade = true,
+          width = "100%",
         },
         indent = {
           indent_size = 2,
@@ -146,7 +147,7 @@ return {
       commands = {},
       window = {
         position = "left",
-        width = 40,
+        width = 5,
         mapping_options = {
           noremap = true,
           nowait = true,
@@ -247,6 +248,7 @@ return {
         use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
         -- instead of relying on nvim autocmd events.
         window = {
+          auto_expand_width = true,
           mappings = {
             ["<bs>"] = "navigate_up",
             ["."] = "set_root",
